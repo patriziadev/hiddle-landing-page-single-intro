@@ -1,32 +1,56 @@
+// Colors
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+
+// Background definition
+$desktop-width: 1440px;
+$mobile-width: 375px;
+$desktop-bgimage: "../images/bg-desktop.svg";
+$mobile-bgimage: "../images/bg-mobile.svg";
+
+@mixin background($min-width, $background-image) {
+    width: 100vw;
+    min-width: $min-width;
+    height: 100vh;
+    background-color: $violet;
+    background-image: url($background-image);
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 // Grid area definition
-header {
+
+#header {
     grid-area: header;
 }
 
-#image {
-    grid-area: image;
+#main {
+    grid-area: main;
 }
 
-#text {
-    grid-area: text;
-}
-
-#social {
-    grid-area: social;
-}
-
-footer {
+#footer {
     grid-area: footer;
 }
 
 #wrapper {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% auto auto 10%;
-    grid-template-areas:
-        "header header"
-        "image text"
-        "social social"
-        "footer footer";
     margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10vh auto 10vh;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    @include background($desktop-width, $desktop-bgimage);
+}
+
+@media screen and (max-width: 600px) {
+    #wrapper {
+        @include background($mobile-width, $mobile-bgimage);
+    }
 }

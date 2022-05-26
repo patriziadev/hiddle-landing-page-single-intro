@@ -2,33 +2,32 @@ body {
   margin: 0;
   padding: 0; }
 
-#header {
-  grid-area: header; }
-
-#main {
-  grid-area: main; }
-
-#footer {
-  grid-area: footer; }
-
 #wrapper {
   margin: 0;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 10vh auto 10vh;
+  grid-template-rows: 20vh auto 10vh;
   grid-template-areas: "header" "main" "footer";
   width: 100vw;
-  min-width: 1440px;
   height: 100vh;
   background-color: #674baf;
   background-image: url("../images/bg-desktop.svg");
   background-position: center;
   background-size: cover; }
+  #wrapper header {
+    grid-area: header;
+    width: 90vw;
+    margin: auto; }
+    #wrapper header #logo img {
+      max-height: 50px; }
+  #wrapper #main {
+    grid-area: main; }
+  #wrapper #footer {
+    grid-area: footer; }
 
 @media screen and (max-width: 600px) {
   #wrapper {
     width: 100vw;
-    min-width: 375px;
     height: 100vh;
     background-color: #674baf;
     background-image: url("../images/bg-mobile.svg");

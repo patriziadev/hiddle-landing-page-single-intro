@@ -8,9 +8,11 @@ $mobile-width: 375px;
 $desktop-bgimage: "../images/bg-desktop.svg";
 $mobile-bgimage: "../images/bg-mobile.svg";
 
-@mixin background($min-width, $background-image) {
+// Other styles
+$content-width: 90vw;
+
+@mixin background($background-image) {
     width: 100vw;
-    min-width: $min-width;
     height: 100vh;
     background-color: $violet;
     background-image: url($background-image);
@@ -25,32 +27,40 @@ body {
 
 // Grid area definition
 
-#header {
-    grid-area: header;
-}
-
-#main {
-    grid-area: main;
-}
-
-#footer {
-    grid-area: footer;
-}
-
 #wrapper {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 10vh auto 10vh;
+    grid-template-rows: 20vh auto 10vh;
     grid-template-areas:
         "header"
         "main"
         "footer";
-    @include background($desktop-width, $desktop-bgimage);
+    @include background($desktop-bgimage);
+
+    header {
+        grid-area: header;
+        width: $content-width;
+        margin: auto;
+
+        #logo {
+            img {
+                max-height: 50px;
+            }
+        }
+    }
+
+    #main {
+        grid-area: main;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
 }
 
 @media screen and (max-width: 600px) {
     #wrapper {
-        @include background($mobile-width, $mobile-bgimage);
+        @include background($mobile-bgimage);
     }
 }

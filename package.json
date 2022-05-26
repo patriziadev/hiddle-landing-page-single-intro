@@ -1,22 +1,23 @@
 {
-  "name": "huddle-landing-page-single-intro",
-  "version": "1.0.0",
-  "description": "Huddle landing page single intro is a frontendmentor.io project",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/patriziadev/hiddle-landing-page-single-intro.git"
-  },
-  "author": "ZaBo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/patriziadev/hiddle-landing-page-single-intro/issues"
-  },
-  "homepage": "https://github.com/patriziadev/hiddle-landing-page-single-intro#readme",
-  "dependencies": {
-    "node-sass": "^7.0.1"
-  }
+    "name": "huddle-landing-page-single-intro",
+    "version": "1.0.0",
+    "description": "Huddle landing page single intro is a frontendmentor.io project",
+    "main": "index.js",
+    "scripts": {
+        "scss": "node-sass --watch scss -o css",
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/patriziadev/hiddle-landing-page-single-intro.git"
+    },
+    "author": "ZaBo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/patriziadev/hiddle-landing-page-single-intro/issues"
+    },
+    "homepage": "https://github.com/patriziadev/hiddle-landing-page-single-intro#readme",
+    "dependencies": {
+        "node-sass": "^7.0.1"
+    }
 }

@@ -1,0 +1,21 @@
+header {
+  grid-area: header; }
+
+#image {
+  grid-area: image; }
+
+#text {
+  grid-area: text; }
+
+#social {
+  grid-area: social; }
+
+footer {
+  grid-area: footer; }
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% auto auto 10%;
+  grid-template-areas: "header header" "image text" "social social" "footer footer";
+  margin: 0; }

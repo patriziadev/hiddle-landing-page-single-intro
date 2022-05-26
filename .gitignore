@@ -1,2 +1,6 @@
 # Remove dependencies
 node_modules
+
+# Remove OS generated files #
+.DS_Store
+.DS_Store?

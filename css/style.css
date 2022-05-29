@@ -20,16 +20,55 @@ body {
     margin: auto; }
     #wrapper header #logo img {
       max-height: 50px; }
-  #wrapper #main {
-    grid-area: main; }
+  #wrapper main {
+    grid-area: main;
+    width: 90vw;
+    margin: auto; }
+    #wrapper main #content {
+      display: flex;
+      flex-direction: row; }
+      #wrapper main #content #image {
+        width: 50%; }
+        #wrapper main #content #image img {
+          width: 100%; }
+      #wrapper main #content #description {
+        width: 50%;
+        padding: 0 5%; }
+        #wrapper main #content #description h1 {
+          font-family: "Poppins", sans-serif;
+          font-size: 35px;
+          color: white; }
+        #wrapper main #content #description p {
+          font-family: "Open Sans", sans-serif;
+          color: white; }
+        #wrapper main #content #description button {
+          background-color: white;
+          color: #674baf;
+          border: 0;
+          border-radius: 20px;
+          padding: 12px 50px;
+          margin: 20px 0;
+          box-shadow: 0px 3px 15px black; }
+          #wrapper main #content #description button:hover, #wrapper main #content #description button:active {
+            background-color: #e882e8;
+            color: white;
+            cursor: pointer; }
   #wrapper #footer {
     grid-area: footer; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   #wrapper {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: #674baf;
     background-image: url("../images/bg-mobile.svg");
     background-position: center;
-    background-size: cover; } }
+    background-size: cover; }
+    #wrapper main #content {
+      flex-direction: column; }
+      #wrapper main #content #image {
+        width: 100%; }
+      #wrapper main #content #description {
+        width: 100%;
+        padding: 0;
+        text-align: center; } }

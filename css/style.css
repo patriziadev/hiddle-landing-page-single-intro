@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: white;
+  font-family: "Open Sans", sans-serif; }
 
 #wrapper {
   margin: 0;
@@ -9,7 +11,7 @@ body {
   grid-template-rows: 20vh auto 10vh;
   grid-template-areas: "header" "main" "footer";
   width: 100vw;
-  height: 100vh;
+  height: 1005;
   background-color: #674baf;
   background-image: url("../images/bg-desktop.svg");
   background-position: center;
@@ -36,11 +38,7 @@ body {
         padding: 0 5%; }
         #wrapper main #content #description h1 {
           font-family: "Poppins", sans-serif;
-          font-size: 35px;
-          color: white; }
-        #wrapper main #content #description p {
-          font-family: "Open Sans", sans-serif;
-          color: white; }
+          font-size: 35px; }
         #wrapper main #content #description button {
           background-color: white;
           color: #674baf;
@@ -48,15 +46,41 @@ body {
           border-radius: 20px;
           padding: 12px 50px;
           margin: 20px 0;
-          box-shadow: 0px 3px 15px black; }
+          box-shadow: 0px 3px 15px black;
+          webkit-transition: color 1s, background-color 1s;
+          -moz-transition: color 1s, background-color 1s;
+          -o-transition: color 1s, background-color 1s;
+          transition: color 1s, background-color 1s; }
           #wrapper main #content #description button:hover, #wrapper main #content #description button:active {
             background-color: #e882e8;
             color: white;
             cursor: pointer; }
-  #wrapper #footer {
-    grid-area: footer; }
+    #wrapper main #social {
+      text-align: right; }
+      #wrapper main #social div {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        margin: 0 0 0 10px;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 50%; }
+        #wrapper main #social div:hover {
+          color: #e882e8;
+          webkit-transition: color 1s, background-color 1s;
+          -moz-transition: color 1s, background-color 1s;
+          -o-transition: color 1s, background-color 1s;
+          transition: color 1s, background-color 1s; }
+  #wrapper footer p {
+    grid-area: footer;
+    text-align: center;
+    font-size: 12px; }
+    #wrapper footer p a {
+      color: #e882e8;
+      text-decoration: underline; }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 768px) {
   #wrapper {
     width: 100vw;
     height: 100%;
@@ -71,4 +95,7 @@ body {
       #wrapper main #content #description {
         width: 100%;
         padding: 0;
-        text-align: center; } }
+        text-align: center; }
+    #wrapper main #social {
+      text-align: center;
+      margin-top: 20px; } }

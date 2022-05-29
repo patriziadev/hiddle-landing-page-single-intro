@@ -1,7 +1,7 @@
 // Colors
 $violet: hsl(257, 40%, 49%);
 $magenta: hsl(300, 69%, 71%);
-$while: hsl(0, 0%, 100%);
+$white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 
 // Typography
@@ -27,9 +27,18 @@ $content-width: 90vw;
     background-size: cover;
 }
 
+@mixin button-transition {
+    webkit-transition: color 1s, background-color 1s;
+    -moz-transition: color 1s, background-color 1s;
+    -o-transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s;
+}
+
 body {
     margin: 0;
     padding: 0;
+    color: $white;
+    font-family: $font-family-body;
 }
 
 // Grid area definition
@@ -43,7 +52,7 @@ body {
         "header"
         "main"
         "footer";
-    @include background(100vh, $desktop-bgimage);
+    @include background(1005, $desktop-bgimage);
 
     header {
         grid-area: header;
@@ -81,40 +90,62 @@ body {
                 h1 {
                     font-family: $font-family-title;
                     font-size: $font-size-title;
-                    color: $while;
-                }
-
-                p {
-                    font-family: $font-family-body;
-                    color: $while;
                 }
 
                 button {
-                    background-color: $while;
+                    background-color: $white;
                     color: $violet;
                     border: 0;
                     border-radius: 20px;
                     padding: 12px 50px;
                     margin: 20px 0;
                     box-shadow: 0px 3px 15px $black;
+                    @include button-transition();
 
                     &:hover,
                     &:active {
                         background-color: $magenta;
-                        color: $while;
+                        color: $white;
                         cursor: pointer;
                     }
                 }
             }
         }
+
+        #social {
+            text-align: right;
+
+            div {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                padding: 10px;
+                margin: 0 0 0 10px;
+                text-align: center;
+                border: 1px solid;
+                border-radius: 50%;
+
+                &:hover {
+                    color: $magenta;
+                    @include button-transition();
+                }
+            }
+        }
     }
 
-    #footer {
+    footer p {
         grid-area: footer;
+        text-align: center;
+        font-size: 12px;
+
+        a {
+            color: $magenta;
+            text-decoration: underline;
+        }
     }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 768px) {
     #wrapper {
         @include background(100%, $mobile-bgimage);
 
@@ -131,6 +162,11 @@ body {
                     padding: 0;
                     text-align: center;
                 }
+            }
+
+            #social {
+                text-align: center;
+                margin-top: 20px;
             }
         }
     }

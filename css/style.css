@@ -46,11 +46,14 @@ body {
           border-radius: 20px;
           padding: 12px 50px;
           margin: 20px 0;
-          box-shadow: 0px 3px 15px black;
           webkit-transition: color 1s, background-color 1s;
           -moz-transition: color 1s, background-color 1s;
           -o-transition: color 1s, background-color 1s;
-          transition: color 1s, background-color 1s; }
+          transition: color 1s, background-color 1s;
+          -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+          -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+          -o-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6); }
           #wrapper main #content #description button:hover, #wrapper main #content #description button:active {
             background-color: #e882e8;
             color: white;

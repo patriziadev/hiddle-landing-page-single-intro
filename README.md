@@ -1,5 +1,9 @@
 # Frontend Mentor - Huddle landing page with single introductory section
 
+Huddle landing page single intro is a landing page coded with HTML and SCSS. It is responsive with two layouts: one for the desktop sites and another for the smartphone/mini-tablet sites. [Take a look at the final result here!]([https://huddle-landing-page-e2kquvpfi.vercel.app/](https://hiddle-landing-page-single-intro.vercel.app/))
+
+Huddle is a front-end coding challenge by [Frontend Mentor](https://www.frontendmentor.io/).
+
 ![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)
 
 ## Welcome! 👋

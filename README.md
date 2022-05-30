@@ -4,8 +4,6 @@ Huddle landing page single intro is a landing page coded with HTML and SCSS. It 
 
 Huddle is a front-end coding challenge by [Frontend Mentor](https://www.frontendmentor.io/).
 
-![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)
-
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.

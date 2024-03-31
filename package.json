@@ -1,6 +1,6 @@
 {
     "name": "huddle-landing-page-single-intro",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Huddle landing page single intro is a frontendmentor.io project",
     "main": "index.js",
     "scripts": {
@@ -11,13 +11,13 @@
         "type": "git",
         "url": "git+https://github.com/patriziadev/hiddle-landing-page-single-intro.git"
     },
-    "author": "ZaBo",
+    "author": "ZABOL",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/patriziadev/hiddle-landing-page-single-intro/issues"
     },
     "homepage": "https://github.com/patriziadev/hiddle-landing-page-single-intro#readme",
     "dependencies": {
-        "node-sass": "^7.0.1"
+        "node-sass": "^9.0.0"
     }
 }
